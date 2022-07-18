@@ -6,11 +6,15 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
-    url      = "file:./db.sqlite"
-    // url      = env("DATABASE_URL")
+    // provider = "sqlite"
+    // url      = "file:./db.sqlite"
+    
+    provider = "postgres"
+    url      = env("DATABASE_URL")
 }
 
-model Example {
-    id String @id @default(cuid())
+model Pokemon {
+    id        Int    @id
+    name      String
+    spriteUrl String
 }
