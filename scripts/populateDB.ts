@@ -9,7 +9,11 @@ const fillPokemonData = async () => {
 
   const pokemonData = (await pokemonDataList).results.map((pokemon, index) => ({
     id: index + 1,
-    name: pokemon.name,
+    name: pokemon.name
+      .toLowerCase()
+      .split("-")
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+      .join("-"),
     spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
       index + 1
     }.png`,
@@ -19,7 +23,7 @@ const fillPokemonData = async () => {
   await prisma.pokemon.deleteMany({});
 
   const result = await prisma.pokemon.createMany({
-    data: pokemonData
+    data: pokemonData,
   });
   console.log("Pokemon created?", result);
 
