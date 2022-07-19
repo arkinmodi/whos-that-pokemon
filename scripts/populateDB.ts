@@ -1,7 +1,7 @@
 import { PokemonClient } from "pokenode-ts";
 
 import { prisma } from "../src/server/db/client";
-import { MAX_NATIONAL_DEX_ID } from "../src/utils/pokemonService";
+import { MAX_NATIONAL_DEX_ID } from "../src/server/router/pokemon";
 
 const fillPokemonData = async () => {
   const pokemonApiClient = new PokemonClient();
