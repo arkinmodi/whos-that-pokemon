@@ -90,7 +90,7 @@ const Home: NextPage = () => {
       {!data && (
         <Image src="/loading.svg" width={256} height={256} alt="Loading..." />
       )}
-      <footer className="w-full text-center pb-2 relative md:fixed bottom-2">
+      <footer className="w-full text-center pb-2 relative lg:fixed bottom-2">
         <a
           href="https://github.com/arkinmodi/whos-that-pokemon"
           target="_blank"
