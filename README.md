@@ -2,7 +2,7 @@
 
 A clone of the classic Pokémon Ad break, Who's That Pokémon!
 
-This app is currently set to use Generation 1 Pokémon. To change that, set the max Pokédex number (`MAX_NATIONAL_DEX_ID`) in `src/server/router/pokemon.ts` and re-running `npm run db-fill`. Remember to check with [pokeapi.co](https://pokeapi.co/) to see up to what generation they support.
+This app is currently set to use Generation 1 Pokémon. To change that, set the max Pokédex number (`MAX_NATIONAL_DEX_ID`) in [`pokemon.ts`](src/server/router/pokemon.ts) and re-running `npm run db-fill`. Remember to check with [pokeapi.co](https://pokeapi.co/) to see up to what generation they support.
 
 ## Setup
 
