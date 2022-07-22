@@ -35,5 +35,3 @@ const fillPokemonData = async () => {
 };
 
 fillPokemonData();
-
-// NODE_ENV=development npx ts-node --compiler-options '{"module":"commonjs"}' scripts/populateDB.ts
