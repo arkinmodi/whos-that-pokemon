@@ -1,7 +1,7 @@
 import { createRouter } from "./context";
 import { z } from "zod";
 
-export const MAX_NATIONAL_DEX_ID = 151;
+export const MAX_NATIONAL_DEX_ID = 493;
 
 export const pokemonRouter = createRouter().query("get-game", {
   input: z.object({ numOptions: z.number().min(1).max(MAX_NATIONAL_DEX_ID) }),
