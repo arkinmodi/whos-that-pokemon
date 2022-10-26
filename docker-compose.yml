@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   database:
     image: mysql:8.0.30
@@ -6,8 +6,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: whos-that-pokemon
-    ports: 
-    - 3306:3306
+    ports:
+      - 3306:3306
     volumes:
       - db-data:/var/lib/mysql
 
