@@ -8,9 +8,12 @@ generator client {
 }
 
 datasource db {
-    provider             = "mysql"
-    url                  = env("DATABASE_URL")
-    referentialIntegrity = "prisma"
+    provider = "sqlite"
+    url      = "file:./db.sqlite"
+
+    // provider             = "mysql"
+    // url                  = env("DATABASE_URL")
+    // referentialIntegrity = "prisma"
 }
 
 model Pokemon {

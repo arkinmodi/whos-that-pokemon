@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "db-init": "prisma migrate dev",
-    "db-fill": "NODE_ENV=development ts-node --compiler-options '{\"module\":\"commonjs\"}' ./scripts/populateDB.ts"
+    "db:push": "prisma db push",
+    "db:fill": "NODE_ENV=development ts-node --compiler-options '{\"module\":\"commonjs\"}' ./scripts/populateDB.ts",
+    "db:generateJSON": "NODE_ENV=development ts-node --compiler-options '{\"module\":\"commonjs\"}' ./scripts/generateJSON.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.1.0",
