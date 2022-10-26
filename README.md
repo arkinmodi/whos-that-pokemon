@@ -2,18 +2,26 @@
 
 A clone of the classic Pokémon Ad break, Who's That Pokémon!
 
-This app is currently set to use Pokémon from Generation 1 to 4. To change that, set the max Pokédex number (`MAX_NATIONAL_DEX_ID`) in [`pokemon.ts`](src/server/router/pokemon.ts) and re-running `npm run db-fill`. Remember to check with [pokeapi.co](https://pokeapi.co/) to see up to what generation they support.
+This app is currently set to use Pokémon from Generation 1 to 4. To change that, set the max Pokédex number (`MAX_NATIONAL_DEX_ID`) in [`pokemon.ts`](src/server/router/pokemon.ts) and re-running `npm run db:fill` (or `npm run db:generateJSON` if not using a database). Remember to check with [pokeapi.co](https://pokeapi.co/) to see up to what generation they support.
 
-## Setup
+## Setup without Database
+
+This method will use [`db.json`](src/server/db/db.json) instead of a database.
+
+1. Run `npm install`.
+2. Run `npm run dev` to start a development server on `localhost:3000`
+
+## Setup with Database
 
 1. Create a `.env` file following `.env.example`.
 
 - The default `DATABASE_URL` in `.env.example` is setup to work with the `docker-compose.yml`.
 
 2. Run `docker compose up` to start a MySQL instance.
-3. Run `npm run db-init` to apply the database schema.
-4. Run `npm run db-fill` to populate the database with Pokémon.
-5. Run `npm run dev` to start a development server on `localhost:3000`
+3. Run `npm install`.
+4. Run `npm run db-init` to apply the database schema.
+5. Run `npm run db-fill` to populate the database with Pokémon.
+6. Run `npm run dev` to start a development server on `localhost:3000`
 
 ## Tech Stack
 
